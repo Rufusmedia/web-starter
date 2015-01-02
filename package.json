@@ -1,0 +1,23 @@
+{
+  "name": "rm-project-starter",
+  "version": "1.0.0",
+  "devDependencies": {
+    "browser-sync": "^1.1.1",
+    "gulp": "^3.8.2",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-csslint": "^0.1.4",
+    "gulp-imagemin": "^1.1.0",
+    "gulp-minify-css": "^0.3.5",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^0.7.2",
+    "gulp-size": "^0.4.0",
+    "gulp-util": "^2.2.18",
+    "gulp-watch": "^0.6.8"
+  },
+  "scripts": {
+    "start": "gulp",
+    "csslint": "gulp csslint",
+    "minify-css": "gulp minify-css",
+    "images": "gulp minify-img"
+  }
+}
