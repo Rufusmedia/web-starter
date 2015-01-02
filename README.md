@@ -15,7 +15,7 @@ To set up a convenient dev environment, clone this repo and run the following
 at the site root.
 
 ```bash
-npm install .
+npm install
 ```
 
 Then run
