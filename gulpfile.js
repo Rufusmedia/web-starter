@@ -4,13 +4,11 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     watch = require('gulp-watch'),
-    prefix = require('gulp-autoprefixer'),
     size = require('gulp-size'),
     rename = require('gulp-rename'),
     imagemin = require('gulp-imagemin'),
     minifyCSS = require('gulp-minify-css'),
     sass = require('gulp-sass'),
-    csslint = require('gulp-csslint'),
     browserSync = require('browser-sync'),
     browserReload = browserSync.reload;
 
@@ -34,25 +32,11 @@ gulp.task('minify-img', function(){
     .pipe(gulp.dest('./img/'));
 });
 
-// Use csslint without box-sizing or compatible vendor prefixes (these
-// don't seem to be kept up to date on what to yell about)
-gulp.task('csslint', function(){
-  gulp.src('./css/style.css')
-    .pipe(csslint({
-          'compatible-vendor-prefixes': false,
-          'box-sizing': false,
-          'important': false,
-          'known-properties': false
-        }))
-    .pipe(csslint.reporter());
-});
-
 // Task that compiles scss files down to good old css
 gulp.task('pre-process', function(){
   gulp.src('./sass/style.scss')
       .pipe(watch(function(files) {
         return files.pipe(sass())
-          .pipe(prefix())
           .pipe(size({gzip: false, showFiles: true}))
           .pipe(size({gzip: true, showFiles: true}))
           .pipe(gulp.dest('css'))
@@ -89,7 +73,7 @@ gulp.task('bs-reload', function () {
 
 */
 gulp.task('default', ['pre-process', 'bs-reload', 'browser-sync'], function(){
-  gulp.start('pre-process', 'csslint', 'minify-img');
+  gulp.start('pre-process', 'minify-img');
   gulp.watch('sass/*.scss', ['pre-process']);
   gulp.watch('css/style.css', ['bs-reload']);
   gulp.watch('*.html', ['bs-reload']);

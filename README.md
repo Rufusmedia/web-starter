@@ -4,8 +4,6 @@
 
 * sass compilation
 * css minification
-* css linting
-* autoprefixer (automatically adds appropriate vendor prefixes) 
 * browser reload on filesave
 * local server for serving a static site
 
