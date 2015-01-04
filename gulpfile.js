@@ -36,7 +36,7 @@ gulp.task('minify-img', function(){
 gulp.task('pre-process', function(){
   gulp.src('./sass/style.scss')
       .pipe(watch(function(files) {
-        return files.pipe(sass())
+        return files.pipe(sass({errLogToConsole: true}))
           .pipe(size({gzip: false, showFiles: true}))
           .pipe(size({gzip: true, showFiles: true}))
           .pipe(gulp.dest('css'))
