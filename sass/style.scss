@@ -1,5 +1,140 @@
 @import "lib/normalize";
 @import "variables";
+@import "grid";
 
 // ADD SITE STYLES HERE
 
+/*
+====================================================================
+SITE LAYOUT SECTION:
+*this is where we put code that applies to the whole page
+layout.  Things like default colors, typography, site
+structure, and helper styles
+====================================================================
+*/
+.wrap {
+  max-width: 75%;
+  margin: 0 auto 150px;
+  background: #fff;
+  box-shadow: 2px 2px 3px rgba(0,0,0,.7);
+  border-top: solid 150px #eee;
+  padding-top: 30px;
+}
+
+
+
+/*
+====================================================================
+UI LAYOUT SECTION:
+*this is where we put code that has to do with our site
+controls and user interface.  Things like navigation,
+buttons, links, etc...
+====================================================================
+*/
+.ui {
+  background: #D22042;
+  position: fixed;
+  top: 0;
+  left:0;
+  right:0;
+  z-index: 999;
+  box-shadow: 2px 2px 3px rgba(0,0,0,.7);
+}
+
+.logo {
+  font-size: 2em;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  color: #fff;
+}
+
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float: right;
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-left: solid 1px #eee;
+    border-bottom: solid 10px #D22042;
+    border-top: solid 10px #D22042;
+    color: #fff;
+  }
+}
+
+
+/*
+====================================================================
+CONTENT LAYOUT SECTION:
+*this is where we put code that has to do with our site main
+content section(s).  Article and comment styling will likely
+go here.
+====================================================================
+*/
+article {
+  border-bottom: solid 1px #eee;
+  padding: 30px 90px;
+}
+
+article .col-1-4 img {
+  display: block;
+}
+
+article .col-3-4 {
+  padding: 0 0 0 30px;
+}
+
+
+
+/*
+====================================================================
+SIDEBAR LAYOUT SECTION:
+*this is where we put code that has to do with our site
+sidebar section(s).  Widgets and such will be styled here.
+====================================================================
+*/
+
+
+
+
+/*
+====================================================================
+FOOTER LAYOUT SECTION:
+*this is where we put code that has to do with our site
+footer section(s).  Social media, copyrights, ect...
+====================================================================
+*/
+
+
+
+/*
+====================================================================
+MEDIA QUERY SECTION:
+*this is where we put code that makes our site look good on
+different screen sizes.
+====================================================================
+*/
+
+/*
+PHONE LANDSCAPE AND SMALLER
+------------------------------------
+*/
+@media (max-width: 480px) {
+  /* our code here... */
+}
+
+
+/*
+LANDSCAPE PHONE TO PORTRAIT TABLET
+------------------------------------
+*/
+@media (max-width: 767px) {
+  /* our code here... */
+}

@@ -323,3 +323,184 @@ td, th {
 /* ==========================================================================
    VARIABLES
    ========================================================================== */
+/*
+STUDENT:
+THE BELOW FILE IS A BASIC RESPONSIVE GRID.  IT WORKS BY ESTABLISHING ROWS AND COLUMNS.  ALL COLUMNS MUST BE INSIDE OF
+A ROW IN YOUR HTML. YOU MOST LIKELY WILL NOT NEED TO EDIT THE CODE BELOW VERY MUCH.
+KEEP YOUR SITE LAYOUT STYLES IN "STYLE.CSS"
+*/
+/*
+THE BELOW RULE CAUSES PADDING AND BORDER TO NOT AFFECT THE WIDTH OF BLOCK LEVEL ELEMENTS.  THE "*" SELECTOR
+MEANS "TARGET ALL ELEMENTS".  IE8+
+*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*
+CLEAR FLOATED ELEMENTS.
+*/
+.row, .cf {
+  overflow: hidden; }
+
+/*
+THE BELOW "[class*='col-']" SELECTOR WILL TARGET ALL CLASSES THAT HAVE "COL-" IN THEM AND FLOAT THEM LEFT.
+ADD PADDING HERE TO CONTROL GUTTER BETWEEN COLUMNS
+*/
+[class*='col-'] {
+  float: left;
+  padding: 0;
+  min-height: 10px;
+  position: relative; }
+
+/*
+PERCENTAGE COLUMN GRID CLASSES BELOW.  THINK OF THESE AS "ONE HALF" OR "ONE THIRD" OR "ONE FIFTH".  THE NUMBER
+OF COLUMNS IN A ROW MUST ADD UP TO ONE.  FOR INSTANCE, YOU NEED TWO "COL-1-2" IN A ROW.  OR YOU NEED
+FOUR "COL-1-4" IN A ROW. OR ONE "COL-1-3" AND ONE "COL-2-3".  THINK ABOUT IT.
+*/
+.col-1-1 {
+  width: 100%; }
+
+.col-1-2 {
+  width: 50%; }
+
+.col-1-4 {
+  width: 25%; }
+
+.col-1-5 {
+  width: 20%; }
+
+.col-2-5 {
+  width: 40%; }
+
+.col-3-5 {
+  width: 60%; }
+
+.col-4-5 {
+  width: 80%; }
+
+.col-3-4 {
+  width: 75%; }
+
+.col-1-3 {
+  width: 33.33%; }
+
+.col-2-3 {
+  width: 66.66%; }
+
+/*
+THIS WILL MAKE IMAGES AND IFRAMES "RESPONSIVE".  THEY'LL NEVER POP OUTSIDE OF THEIR ROW OR CONTAINING
+ELEMENT.  DON'T USE THIS AS A REPLACEMENT FOR SIZING YOUR IMAGES PROPERLY THOUGH.  REMEMBER YOUR FILE
+SIZE IS IMPORTANT ON THE WEB.
+*/
+img, iframe {
+  max-width: 100%;
+  height: auto; }
+
+/*
+====================================================================
+SITE LAYOUT SECTION:
+*this is where we put code that applies to the whole page
+layout.  Things like default colors, typography, site
+structure, and helper styles
+====================================================================
+*/
+.wrap {
+  max-width: 75%;
+  margin: 0 auto 150px;
+  background: #fff;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+  border-top: solid 150px #eee;
+  padding-top: 30px; }
+
+/*
+====================================================================
+UI LAYOUT SECTION:
+*this is where we put code that has to do with our site
+controls and user interface.  Things like navigation,
+buttons, links, etc...
+====================================================================
+*/
+.ui {
+  background: #D22042;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7); }
+
+.logo {
+  font-size: 2em;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  color: #fff; }
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float: right; }
+  .menu li {
+    display: inline-block; }
+  .menu a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-left: solid 1px #eee;
+    border-bottom: solid 10px #D22042;
+    border-top: solid 10px #D22042;
+    color: #fff; }
+
+/*
+====================================================================
+CONTENT LAYOUT SECTION:
+*this is where we put code that has to do with our site main
+content section(s).  Article and comment styling will likely
+go here.
+====================================================================
+*/
+article {
+  border-bottom: solid 1px #eee;
+  padding: 30px 90px; }
+
+article .col-1-4 img {
+  display: block; }
+
+article .col-3-4 {
+  padding: 0 0 0 30px; }
+
+/*
+====================================================================
+SIDEBAR LAYOUT SECTION:
+*this is where we put code that has to do with our site
+sidebar section(s).  Widgets and such will be styled here.
+====================================================================
+*/
+/*
+====================================================================
+FOOTER LAYOUT SECTION:
+*this is where we put code that has to do with our site
+footer section(s).  Social media, copyrights, ect...
+====================================================================
+*/
+/*
+====================================================================
+MEDIA QUERY SECTION:
+*this is where we put code that makes our site look good on
+different screen sizes.
+====================================================================
+*/
+/*
+PHONE LANDSCAPE AND SMALLER
+------------------------------------
+*/
+@media (max-width: 480px) { }
+
+/*
+LANDSCAPE PHONE TO PORTRAIT TABLET
+------------------------------------
+*/
+@media (max-width: 767px) { }
